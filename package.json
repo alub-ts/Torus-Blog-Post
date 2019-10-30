@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@terminal-packages/sdk": "^1.0.24",
+    "@toruslabs/torus-embed": "^0.2.3",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
