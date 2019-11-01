@@ -17,11 +17,11 @@ function App() {
         apiKey: "Z0CsA9B5xAkCjfw0kcKh6g==",
         source: "TORUS",
         environment: sdk.EnvironmentTypes.live,
-        projectId: "bYzPZdjZezVQKvLA"
+        projectId: "bYzPZdjZezVQKvLA",
+        web3Version: sdk.Web3Versions.one
       })
     );
     //const web3 = new Web3(torus.provider);
-    console.log(web3.eth.accounts[0]);
     web3.eth.getBalance(
       "0xE22FD0840d127E44557D5E19A0A9a52EAfc3e297",
       (error, result) => {
