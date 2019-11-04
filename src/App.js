@@ -1,7 +1,7 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { Web3Versions } from "@terminal-packages/sdk";
 import Torus from "@toruslabs/torus-embed";
+import React from "react";
+import "./App.css";
 const Web3 = require("web3");
 const sdk = require("@terminal-packages/sdk");
 function App() {
@@ -18,7 +18,7 @@ function App() {
         source: "TORUS",
         environment: sdk.EnvironmentTypes.live,
         projectId: "bYzPZdjZezVQKvLA",
-        web3Version: sdk.Web3Versions.one
+        web3Version: Web3Versions.one
       })
     );
     //const web3 = new Web3(torus.provider);
@@ -29,10 +29,18 @@ function App() {
         console.log(result);
       }
     );
+
+    web3.eth.getTransaction(
+      "0xe627d0bc7348e0c0a8a662ffefdc5b420ac669a9805811a61884ac3845910738",
+      (error, result) => {
+        console.log(error);
+        console.log(result);
+      }
+    );
   };
+  setup();
   return (
     <div className="App">
-      <button onClick={() => setup()}>SETUP</button>
       <button onClick={() => tester()}>TEST</button>
     </div>
   );
